@@ -139,33 +139,70 @@ function resetWeights() {
 
         switch (finalPersonality) {
             case 'ISTJ':
-                Patches.inputs.setString('title', 'You are the' + 'Proton');
+                Patches.inputs.setString('title', 'You are the ' + 'Proton');
                 Patches.inputs.setString('description', 'Involved in nuclear reactions, they like strictness and order. They have a positive charge and make up the mass of the atom along with the neutrons. Doesn’t flow like an electron. Stable and accountable.');
                 break;
             case 'INTP':
-                Patches.inputs.setString('title', 'You are the' + 'Gauge boson');
+                Patches.inputs.setString('title', 'You are the ' + 'Gauge boson');
                 Patches.inputs.setString('description', 'You seek harmony, calm emotions and comfort, and feel at peace in nature. Gauge bosons carry force, for example, a photon.');
                 break;
             case 'ESFJ':
-                Patches.inputs.setString('title', 'You are the' + 'Electron');
+                Patches.inputs.setString('title', 'You are the ' + 'Electron');
                 Patches.inputs.setString('description', 'You are easily transferable and freely flowing. Talking to people comes easy to you and you are always open to making a new friend.');
                 break;
-            // case 1:
-            //     // Do you like thinking about hypotheticals?
-            //     tempPersonality += 'S'
-            //     Diagnostics.log("Current Personality: " + tempPersonality)
-            //     break;
-            // case 2:
-            //     // Do you prefer to think with your heart?
-            //     tempPersonality += 'F'
-            //     Diagnostics.log("Current Personality: " + tempPersonality)
-            //     break;
-            // case 3:
-            //     // Do you leave things to the last second?
-            //     tempPersonality += 'J'
-            //     Diagnostics.log("Current Personality: " + tempPersonality)
-            //     break;
-
+            case 'ESTJ':
+                Patches.inputs.setString('title', 'You are the ' + 'Graviton');
+                Patches.inputs.setString('description', 'You ignore haters, attracting people towards you and going towards people persistently.');
+                break;
+            case 'ENFP':
+                Patches.inputs.setString('title', 'You are the ' + 'Charm quark');
+                Patches.inputs.setString('description', 'The quark with the most experience with all 4 fundamental interactions. You are well-liked!');
+                break;
+            case 'INFP':
+                Patches.inputs.setString('title', 'You are the ' + 'Photon');
+                Patches.inputs.setString('description', 'Photons travel at the fastest speed possible. Despite their short rest lifespan, dilation makes them lose sense of time and reality. ');
+                break;
+            case 'ISTP':
+                Patches.inputs.setString('title', 'You are the ' + 'Dark Matter');
+                Patches.inputs.setString('description', 'Technical mindset, you always meet deadlines, you are very punctual by nature and you don’t need to get recognition for things that you do.');
+                break;
+            case 'ESTP':
+                Patches.inputs.setString('title', 'You are the ' + 'Muon');
+                Patches.inputs.setString('description', 'You are a born fighter. Your perseverance and hard work make no goal too far to reach. You are quick on your feet and ready for anything that comes your way.');
+                break;
+            // ENFJ
+            case 'ISFP':
+                Patches.inputs.setString('title', 'You are the ' + 'Neutrino');
+                Patches.inputs.setString('description', 'You are really down to earth, but prefer not to do deal with conflict. You are caring and find joy in the simple things in life.');
+                break;
+            case 'ISFJ':
+                Patches.inputs.setString('title', 'You are the ' + 'Neutron');
+                Patches.inputs.setString('description', 'Neutrons have no charge, therefore they do not attract or repel electrons and protons. Nuclear forces keep neutrons and protons close. You are loyal to your close friends, and wary and shy of new relationships,. Easygoing and gets along well with everyone.');
+                break;
+            case 'ESFP':
+                Patches.inputs.setString('title', 'You are the ' + 'Higg’s boson');
+                Patches.inputs.setString('description', 'Colloquially known as the God particle, you often meditate on the many reactions and interactions you have witnessed.');
+                break;
+            case 'INFJ':
+                Patches.inputs.setString('title', 'You are the ' + 'Strange quark');
+                Patches.inputs.setString('description', 'The strange quark is the third lightest of all the quarks. You are flexible and can quickly transform mentality depending on the circumstance.');
+                break;
+            case 'INTJ':
+                Patches.inputs.setString('title', 'You are the ' + 'General Antiparticle');
+                Patches.inputs.setString('description', 'Sample Text');
+                break;
+            case 'UNKNOWN':
+                Patches.inputs.setString('title', 'You are the ' + 'Z-boson');
+                Patches.inputs.setString('description', '');
+                break;
+            case 'UNKNOWN1':
+                Patches.inputs.setString('title', 'You are the ' + 'Top quark');
+                Patches.inputs.setString('description', '');
+                break;
+            case 'UNKNOWN2':
+                Patches.inputs.setString('title', 'You are the ' + 'Gluon');
+                Patches.inputs.setString('description', '');
+                break;
         }
         Patches.inputs.setBoolean('quizOver', true)
         Patches.inputs.setVector
