@@ -43,29 +43,18 @@ var leanedRight = false;
 
 var activeEvent = false;
 
-Patches.outputs.getPulse('LeanedRight').then( event => {
-    Diagnostics.log("Leaned Right")
-})
-
 Patches.outputs.getPulse('LeanedLeft').then(event => {
-    Diagnostics.log("Leaned Leijft")
-})
+    event.subscribe(function () {
+        Diagnostics.log("Leaned Left New Version")
+
+    });
+});
 
 
+Patches.outputs.getPulse('LeanedRight').then(event => {
+    event.subscribe(function () {
+        Diagnostics.log("Leaned Right New Version")
+
+    });
+});
 Diagnostics.log("Found")
-// Patches.outputs.getPulse('LeanedLeft').then(event => {
-//     Diagnostics.log("Leaned left");
-//     console.log("Yeah?")
-//     leanedLeftEvent = event.subscribe(function (pulseEvent) {
-//         console.log("test")
-//         if (activeEvent == false) {
-//             activeEvent = true;
-//             leanedLeft = true;
-//             Diagnostics.log("Turning left...");
-//             Patches.inputs.setBoolean('LeaningLeft', leanedLeft);
-//             // timeOut('LeaningLeft', leanedLeft, 'left');
-//             leanedLeft = false;
-//         } else (Diagnostics.log("Active Event")
-//         );
-//     })
-// })
