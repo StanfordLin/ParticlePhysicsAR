@@ -134,15 +134,52 @@ function resetWeights() {
     if (tempPersonality.length == 4) {
         Diagnostics.log("End reached :")
         var finalPersonality = tempPersonality
-        Patches.inputs.setString('title', finalPersonality);
-        Patches.inputs.setString('description', 'The quark with the most experience with all 4 fundamental interactions. You are well-liked!');
+        Patches.inputs.setString('personality', finalPersonality);
+        Diagnostics.log("Current Personality: " + finalPersonality)
+
+        switch (finalPersonality) {
+            case 'ISTJ':
+                Patches.inputs.setString('title', 'You are the' + 'Proton');
+                Patches.inputs.setString('description', 'Involved in nuclear reactions, they like strictness and order. They have a positive charge and make up the mass of the atom along with the neutrons. Doesn’t flow like an electron. Stable and accountable.');
+                break;
+            case 'INTP':
+                Patches.inputs.setString('title', 'You are the' + 'Gauge boson');
+                Patches.inputs.setString('description', 'You seek harmony, calm emotions and comfort, and feel at peace in nature. Gauge bosons carry force, for example, a photon.');
+                break;
+            case 'ESFJ':
+                Patches.inputs.setString('title', 'You are the' + 'Electron');
+                Patches.inputs.setString('description', 'You are easily transferable and freely flowing. Talking to people comes easy to you and you are always open to making a new friend.');
+                break;
+            // case 1:
+            //     // Do you like thinking about hypotheticals?
+            //     tempPersonality += 'S'
+            //     Diagnostics.log("Current Personality: " + tempPersonality)
+            //     break;
+            // case 2:
+            //     // Do you prefer to think with your heart?
+            //     tempPersonality += 'F'
+            //     Diagnostics.log("Current Personality: " + tempPersonality)
+            //     break;
+            // case 3:
+            //     // Do you leave things to the last second?
+            //     tempPersonality += 'J'
+            //     Diagnostics.log("Current Personality: " + tempPersonality)
+            //     break;
+
+        }
         Patches.inputs.setBoolean('quizOver', true)
         Patches.inputs.setVector
         Diagnostics.log("The personality is " + tempPersonality)
         currentQuestionNumber = 0;
         tempPersonality = ''
 
+
+
     }
+
+    // const wow = Scene.root.findFirst('blah').then();
+    // wow.visi
+    Patches.inputs.setBoolean
 
 
 }
