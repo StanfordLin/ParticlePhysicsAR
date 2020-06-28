@@ -188,7 +188,7 @@ function resetWeights() {
                 break;
             case 'INTJ':
                 Patches.inputs.setString('title', 'You are the ' + 'General Antiparticle');
-                Patches.inputs.setString('description', 'Sample Text');
+                Patches.inputs.setString('description', '');
                 break;
             case 'ENTJ':
                 Patches.inputs.setString('title', 'You are the ' + 'Z-boson');
