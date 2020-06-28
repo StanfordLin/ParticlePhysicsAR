@@ -62,7 +62,7 @@ Patches.outputs.getPulse('LeanedLeft').then(event => {
         // No
         Diagnostics.log("Current Personality: " + currentQuestionNumber)
         // Diagnostics.log("Leaned Left New Version")
-        switch(currentQuestionNumber) {
+        switch (currentQuestionNumber) {
             case 0:
                 // Do you read for leisure? No
                 tempPersonality = 'I'
@@ -98,7 +98,7 @@ Patches.outputs.getPulse('LeanedRight').then(event => {
         // Yes
         // Diagnostics.log("Leaned Right New Version")
         Diagnostics.log("Current Personality: " + currentQuestionNumber)
-        switch(currentQuestionNumber) {
+        switch (currentQuestionNumber) {
             case 0:
                 // Do you read for leisure? Yes
                 tempPersonality = 'E'
@@ -134,10 +134,10 @@ function resetWeights() {
     if (tempPersonality.length == 4) {
         Diagnostics.log("End reached :")
         var finalPersonality = tempPersonality
-        Patches.inputs.setString('finalPersonality', finalPersonality);
-        
+        Patches.inputs.setString('title', finalPersonality);
+        Patches.inputs.setString('description', 'The quark with the most experience with all 4 fundamental interactions. You are well-liked!');
         Patches.inputs.setBoolean('quizOver', true)
-        
+        Patches.inputs.setVector
         Diagnostics.log("The personality is " + tempPersonality)
         currentQuestionNumber = 0;
         tempPersonality = ''
