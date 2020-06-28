@@ -65,7 +65,7 @@ Patches.outputs.getPulse('LeanedLeft').then(event => {
         switch (currentQuestionNumber) {
             case 0:
                 // Do you read for leisure? No
-                tempPersonality = 'I'
+                tempPersonality =  'E' 
                 Diagnostics.log("Current Personality: " + tempPersonality)
                 break;
             case 1:
@@ -80,7 +80,7 @@ Patches.outputs.getPulse('LeanedLeft').then(event => {
                 break;
             case 3:
                 // Do you leave things to the last second?
-                tempPersonality += 'P'
+                tempPersonality += 'J'
                 Diagnostics.log("Current Personality: " + tempPersonality)
                 break;
         }
@@ -101,7 +101,7 @@ Patches.outputs.getPulse('LeanedRight').then(event => {
         switch (currentQuestionNumber) {
             case 0:
                 // Do you read for leisure? Yes
-                tempPersonality = 'E'
+                tempPersonality = 'I'
                 Diagnostics.log("Current Personality: " + tempPersonality)
                 break;
             case 1:
@@ -116,7 +116,7 @@ Patches.outputs.getPulse('LeanedRight').then(event => {
                 break;
             case 3:
                 // Do you leave things to the last second?
-                tempPersonality += 'J'
+                tempPersonality += 'P'
                 Diagnostics.log("Current Personality: " + tempPersonality)
                 break;
 
