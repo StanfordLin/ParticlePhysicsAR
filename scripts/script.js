@@ -170,7 +170,6 @@ function resetWeights() {
                 Patches.inputs.setString('title', 'You are the ' + 'Muon');
                 Patches.inputs.setString('description', 'You are a born fighter. Your perseverance and hard work make no goal too far to reach. You are quick on your feet and ready for anything that comes your way.');
                 break;
-            // ENFJ
             case 'ISFP':
                 Patches.inputs.setString('title', 'You are the ' + 'Neutrino');
                 Patches.inputs.setString('description', 'You are really down to earth, but prefer not to do deal with conflict. You are caring and find joy in the simple things in life.');
@@ -191,15 +190,15 @@ function resetWeights() {
                 Patches.inputs.setString('title', 'You are the ' + 'General Antiparticle');
                 Patches.inputs.setString('description', 'Sample Text');
                 break;
-            case 'UNKNOWN':
+            case 'ENTJ':
                 Patches.inputs.setString('title', 'You are the ' + 'Z-boson');
                 Patches.inputs.setString('description', '');
                 break;
-            case 'UNKNOWN1':
+            case 'ENFJ':
                 Patches.inputs.setString('title', 'You are the ' + 'Top quark');
                 Patches.inputs.setString('description', '');
                 break;
-            case 'UNKNOWN2':
+            case 'ENTP':
                 Patches.inputs.setString('title', 'You are the ' + 'Gluon');
                 Patches.inputs.setString('description', '');
                 break;
