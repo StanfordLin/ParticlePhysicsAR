@@ -158,10 +158,6 @@ function resetWeights() {
                 Patches.inputs.setString('title', 'You are the ' + 'Charm quark');
                 Patches.inputs.setString('description', 'The quark with the most experience with all 4 fundamental interactions. You are well-liked!');
                 break;
-            case 'INFP':
-                Patches.inputs.setString('title', 'You are the ' + 'Photon');
-                Patches.inputs.setString('description', 'Photons travel at the fastest speed possible. Despite their short rest lifespan, dilation makes them lose sense of time and reality. ');
-                break;
             case 'ISTP':
                 Patches.inputs.setString('title', 'You are the ' + 'Dark Matter');
                 Patches.inputs.setString('description', 'Technical mindset, you always meet deadlines, you are very punctual by nature and you don’t need to get recognition for things that you do.');
@@ -188,19 +184,23 @@ function resetWeights() {
                 break;
             case 'INTJ':
                 Patches.inputs.setString('title', 'You are the ' + 'General Antiparticle');
-                Patches.inputs.setString('description', '');
+                Patches.inputs.setString('description', 'You strive for excellence, however like General Antiparticle, you enjoy independence and you set priorities and trust your intution.');
                 break;
             case 'ENTJ':
                 Patches.inputs.setString('title', 'You are the ' + 'Z-boson');
-                Patches.inputs.setString('description', '');
+                Patches.inputs.setString('description', 'You live life on the extreme side and are easily inspired. Despite this, you are very aware of your capabilities and use this to your advantage.');
                 break;
             case 'ENFJ':
                 Patches.inputs.setString('title', 'You are the ' + 'Top quark');
-                Patches.inputs.setString('description', '');
+                Patches.inputs.setString('description', 'You are talkative and very understanding. Your ability to understand others allows you to foresee upcoming events and prepare accordingly. Top quark is the most massive of all observed elementary particles.');
+                break;
+            case 'INFP':
+                Patches.inputs.setString('title', 'You are the ' + 'Gluon');
+                Patches.inputs.setString('description', 'You are the mediator among your group.You are able to sense what others are feeling but are not easily influenced or pulled to extremes.Gluon acts as the exchange particle.');
                 break;
             case 'ENTP':
-                Patches.inputs.setString('title', 'You are the ' + 'Gluon');
-                Patches.inputs.setString('description', '');
+                Patches.inputs.setString('title', 'You are the ' + 'Photon');
+                Patches.inputs.setString('description', 'You are a generator of new ideas. You enjoy becoming and innovator and embrace change often. You do not enjoy taking part in old traditions and would rather find your own way of doing things. ');
                 break;
         }
         Patches.inputs.setBoolean('quizOver', true)
