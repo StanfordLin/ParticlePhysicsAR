@@ -43,9 +43,51 @@ var leanedRight = false;
 
 var activeEvent = false;
 
+var tempPersonality;
+
+var currentQuestionNumber = 0;
+
+
+// Patches.outputs.getScalar('questionNumber').then(event => {
+//     event.monitor({ fireOnInitialValue: true }).take(1).subscribe(function (getQuestionNumber) {
+//         currentQuestionNumber = getQuestionNumber.newValue
+//         Diagnostics.log("Question:  " + getQuestionNumber.newValue)
+//     })
+//     Diagnostics.log('lastValue ' + event.pinLastValue.length.valueOf)
+
+// })
+
 Patches.outputs.getPulse('LeanedLeft').then(event => {
     event.subscribe(function () {
-        Diagnostics.log("Leaned Left New Version")
+        // No
+        Diagnostics.log("Current Personality: " + currentQuestionNumber)
+        // Diagnostics.log("Leaned Left New Version")
+        switch(currentQuestionNumber) {
+            case 0:
+                // Do you read for leisure? No
+                tempPersonality = 'I'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 1:
+                // Do you like thinking about hypotheticals?
+                tempPersonality += 'N'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 2:
+                // Do you prefer to think with your heart?
+                tempPersonality += 'T'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 3:
+                // Do you leave things to the last second?
+                tempPersonality += 'P'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+        }
+
+        currentQuestionNumber++;
+        Diagnostics.log("Current Question: " + currentQuestionNumber)
+        resetWeights()
 
     });
 });
@@ -53,8 +95,55 @@ Patches.outputs.getPulse('LeanedLeft').then(event => {
 
 Patches.outputs.getPulse('LeanedRight').then(event => {
     event.subscribe(function () {
-        Diagnostics.log("Leaned Right New Version")
+        // Yes
+        // Diagnostics.log("Leaned Right New Version")
+        Diagnostics.log("Current Personality: " + currentQuestionNumber)
+        switch(currentQuestionNumber) {
+            case 0:
+                // Do you read for leisure? Yes
+                tempPersonality = 'E'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 1:
+                // Do you like thinking about hypotheticals?
+                tempPersonality += 'S'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 2:
+                // Do you prefer to think with your heart?
+                tempPersonality += 'F'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
+            case 3:
+                // Do you leave things to the last second?
+                tempPersonality += 'J'
+                Diagnostics.log("Current Personality: " + tempPersonality)
+                break;
 
+        }
+        currentQuestionNumber++;
+        Diagnostics.log("Current Question: " + currentQuestionNumber)
+        resetWeights()
     });
 });
+
+function resetWeights() {
+    if (currentQuestionNumber == 0) {
+        Diagnostics.log("New Game")
+    }
+    if (tempPersonality.length == 4) {
+        Diagnostics.log("End reached :")
+        var finalPersonality = tempPersonality
+        Patches.inputs.setString('finalPersonality', finalPersonality);
+        
+        Patches.inputs.setBoolean('quizOver', true)
+        
+        Diagnostics.log("The personality is " + tempPersonality)
+        currentQuestionNumber = 0;
+        tempPersonality = ''
+
+    }
+
+
+}
 Diagnostics.log("Found")
